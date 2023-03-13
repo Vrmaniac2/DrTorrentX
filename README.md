@@ -1,11 +1,8 @@
 # How to deploy?
 
-This is working by Workflow Method.
+- `UPSTREAM_REPO`: Your github repository link, if your repo is private add `https://username:{githubtoken}@github.com/{username}/{reponame}` format. Get token from [Github Settings](https://github.com/settings/tokens). So you can update your bot from filled repository on each restart. `Str`.
+- `UPSTREAM_BRANCH`: Upstream branch for update. Default is `master`. `Str`
 
-No need to Fork This Repo (If you have any edits, you can)
+Use this Repo as `UPSTREAM_REPO` Otherwise Fork or Import it as Private.
 
-### Add These in Secrets
-
-- `HEROKU_EMAIL`
-- `HEROKU_API_KEY`
-- `HEROKU_APP_NAME`
+Goto [Heromku](https://github.com/kctelegram5/Heromku) Repo & Deploy From There 
