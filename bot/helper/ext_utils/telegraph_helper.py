@@ -85,5 +85,5 @@ class TelegraphHelper:
             LOGGER.error(f'Failed Revoking telegraph access token due to : {e}')
 
 
-telegraph = TelegraphHelper('Z-Mirror', 'https://github.com/Dawn-India/Z-Mirror')
+telegraph = TelegraphHelper('Dr. Torrent X', 'https://telegram.dog/+UryiGDAoFS5iNzZl')
 bot_loop.run_until_complete(telegraph.create_account())
