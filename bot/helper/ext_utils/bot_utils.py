@@ -136,8 +136,8 @@ def get_readable_message():
                 globals()['PAGE_NO'] -= 1
         for index, download in enumerate(list(download_dict.values())[COUNT:], start=1):
             if config_dict['DM_MODE']:
-                msg += f"Hey <b><i><u>{download.message.from_user.username}</u></i></b>, \
-Please wait!\n<b>{download.status()}</b> Your Task [<a href='{download.message.link}'>{download.mode}</a>]"
+                msg += f"Hey <b><i>@{download.message.from_user.username}</i></b>, Please wait!\n<b>{download.status()}</b> Your Task [<a href='{download.message.link}'>{download.mode}</a>]"
+                msg += f"\n<b>FileName: </b> <code>{escape(str(download.name()))}</code>"
             else:
                 msg += f'\n<b>{download.status()}:</b> <code>{escape(str(download.name()))}</code>'
             if download.status() not in [MirrorStatus.STATUS_SEEDING, MirrorStatus.STATUS_CONVERTING, MirrorStatus.STATUS_PAUSED,
@@ -178,7 +178,7 @@ Please wait!\n<b>{download.status()}</b> Your Task [<a href='{download.message.l
                         msg += f"\n<b>Playlist</b>: {playlist}"
                 except:
                     pass
-            msg += f"\n⚠️ <code>/{BotCommands.CancelMirror} {download.gid()}</code>\n\n"
+            msg += f"\n<b>To Cancel:</b> <code>/{BotCommands.CancelMirror} {download.gid()}</code>"
             if STATUS_LIMIT and index == STATUS_LIMIT:
                 break
         if len(msg) == 0:
