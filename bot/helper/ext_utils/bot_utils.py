@@ -178,7 +178,7 @@ def get_readable_message():
                         msg += f"\n<b>Playlist</b>: {playlist}"
                 except:
                     pass
-            msg += f"\n<b>To Cancel:</b> <code>/{BotCommands.CancelMirror} {download.gid()}</code> \n"
+            msg += f"\n<b>To Cancel:</b> <code>/{BotCommands.CancelMirror} {download.gid()}</code>\n\n"
             if STATUS_LIMIT and index == STATUS_LIMIT:
                 break
         if len(msg) == 0:
