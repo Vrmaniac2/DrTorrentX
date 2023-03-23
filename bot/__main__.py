@@ -87,12 +87,12 @@ async def start(client, message):
         start_string = 'Bot Started.\n' \
                     'Now I will send your files or links here.\n'
     else:
-        start_string = '''
-        Hello, I am a Powerful Telegram Bot for all your transfer and utility tool needs.
-        I can Mirror all your links To Google Drive!
-        Unfortunately you are not authorized!
-        Join <b><a href='https://telegram.dog/+UryiGDAoFS5iNzZl'>Dr. Torrent X</a></b> Group to use the service for free.
-        Thank You!'''
+        start_string = 'Hello, I am a Powerful Telegram Bot for all your transfer and utility tool needs. \n' \
+                       'I can Mirror all your links To Google Drive! \n' \
+                       'Unfortunately you are not authorized!\n' \
+                       'Please Join our Groupto use the services for free \
+                       'Updates Channel -> @DrtorrentxUpdates. \n' \
+                       'Thank You!'
     await sendMessage(message, start_string)
 
 async def restart(client, message):
